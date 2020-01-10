@@ -18,7 +18,7 @@ include_once(dirname(__FILE__) . '/locale/languages.php');
 <html>
 <head>
     <title>
-        <?= T('Feg Serum - Eyelash Enhancer'); ?>
+        <?php echo $product->rand_head ?>
     </title>
 
     <meta name="viewport" content="width=device-width"/>
@@ -55,7 +55,7 @@ include_once(dirname(__FILE__) . '/locale/languages.php');
 
 <header class="container-fluid p-0">
     <div class="blue-line text-center">
-        <?= T('US - 60% OFF ONLY TODAY!'); ?>
+        <?php echo $product->rand_head ?>
     </div>
     <div class="d-flex justify-content-between main-part">
         <div class="logo">
@@ -76,7 +76,7 @@ include_once(dirname(__FILE__) . '/locale/languages.php');
     <div class="row main-product-block">
         <div class='col-lg-7'>
             <div class='ktemplate_userCopy'>
-                <img class="img-fluid" src="<?php echo $product->imgsafe; ?>"/>
+                <img class="img-fluid" src="<?php echo $product->imgsafe ?>"/>
             </div>
         </div>
         <div class="col-lg-5 right-product-block">
@@ -125,7 +125,7 @@ include_once(dirname(__FILE__) . '/locale/languages.php');
                             <div class="qty">
                                 <!--<span class="qty_title">QT</span>-->
                                 <span class="minus"><span class="fa fa-minus" aria-hidden="true"></span></span>
-                                <input type="number" class="count" name="qty" value="1">
+                                <input type="text" class="count" name="qty" value="1">
                                 <span class="plus"><span class="fa fa-plus" aria-hidden="true"></span></span>
                             </div>
                         </div>
