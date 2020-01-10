@@ -1,5 +1,5 @@
 <?php
-$FaceCon = json_decode( file_get_contents(sprintf("%s/../includes/config/facebook.json", dirname(__FILE__))));
+$FaceCon = json_decode( file_get_contents(sprintf("%s/../includes/config/Facebook.json", dirname(__FILE__))));
 //fbq('track', 'AddToCart');
 
 //DO NOT DELETE THIS HEADER OR ETHAN WILL SEND ME TO CUT YOU.
