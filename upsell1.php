@@ -161,8 +161,8 @@ $orderTotal = $ksdk->getOrderTotal();
     <?php
 
     $pageEvent = "Purchase";
-    $Value = json_encode(array("value" => $orderTotal, 'currency' => $data->FaceBookCurrency));
-    $PixelPage = "/upsell.html?Event=$pageEvent&Value=" . rawurlencode($Value);
+    $Value = array("value" => $orderTotal, 'currency' => $data->FaceBookCurrency);
+    $qs = ["Event"=>$pageEvent,"Value"=>$Value];
     include_once('pixelcode/pixelhelper.php');
 
 
