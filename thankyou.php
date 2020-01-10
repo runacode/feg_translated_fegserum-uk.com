@@ -183,6 +183,13 @@ $currency = $ksdk->currencySymbol;
 
 </div>
 
+<?php
+
+
+include_once('pixelcode/pixelhelper.php');
+
+
+?>
 
 
 <script>
