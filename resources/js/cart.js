@@ -144,7 +144,9 @@ window.cart = {
             r += '<div class="upsell-timer"></div>';
             r += '<div class="container cart-line-items text-center">';
             window.cart.line_items.forEach(function(item, i)  {
-
+                    if(i>1){
+                        return;
+                    }
                 r += '<div class="row line-item' + (i == 1 ? ' free-item' : '') + '">';
                 r += '<div class="col-3 img">';
                 r += '<img src="' + item.img_small + '" class="img-fluid" />';
@@ -253,6 +255,9 @@ $(document).ready(function () {
             // $('.cart-container .cart').html(window.cart.render());
             window.cart.updateCartView();
         });
+        setInterval(function () {
+            fnDate();
+        }, 2000);
 
     }
 
@@ -260,6 +265,14 @@ $(document).ready(function () {
     var countdown = $.cookie('upsell_1-countdown') ? $.cookie('upsell_1-countdown') : 0;
     getCountdownMessage('.upsell-timer', countdown, 'The discount expires in');
 });
+function fnDate() {
+    var counter = $('.persons-online>span');
+    var count = Math.floor(Math.random() * 91 + 210);
+
+    if(counter.length){
+        counter.text(count);
+    }
+}
 
 /* Countdowns */
 function getCountdownMessage(selector, time,message) {
