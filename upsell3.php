@@ -62,6 +62,10 @@ $upsell = $ksdk->getProduct((int) $productId);
             <div><?= T('You have'); ?> <em><?= T('WON'); ?></em> <?= T('a'); ?> <em><?= T('FREE'); ?></em><br>
            <?= T('SILICONE MAKE-UP SPONGE!'); ?></div>
         </div>
+        <div class="below-upsell-present">
+            <div class="d-flex line-1"><div><?= T('😱'); ?></div><?= T('SOFT TO SKIN - SILICON'); ?> <br> <?= T('MAKE-UP SPONGE'); ?><div><?= T('😱'); ?></div></div>
+            <div class="line-2"><?=T('NO MESS, IT DOESN\'T HURT <br> YOUR SKIN, EASIER TO USE, <b>ANTIALLERGIC AND ANTIBACTERIAL');?></b></div>
+        </div>
     </div>
 </header>
 
@@ -116,10 +120,12 @@ $upsell = $ksdk->getProduct((int) $productId);
     </script>
     <?php
 
-    $PixelPage="/upsell.html";
+
     include_once('pixelcode/pixelhelper.php');
 
 
     ?>
 </body>
 </html>
+
+
